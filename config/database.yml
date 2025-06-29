@@ -8,5 +8,18 @@
 # test:
 #   <<: *default
 
-# production:
-#   <<: *default
+production:
+  adapter: sqlite3
+  database: ":memory:"
+
+cable:
+  adapter: sqlite3
+  database: ":memory:"
+
+queue:
+  adapter: sqlite3
+  database: ":memory:"
+
+cache:
+  adapter: sqlite3
+  database: ":memory:"

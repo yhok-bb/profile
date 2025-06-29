@@ -35,3 +35,37 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Rails標準
+/log/
+/tmp/
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/assets
+/public/packs
+/node_modules/
+.byebug_history
+
+# 環境変数・認証情報
+.env
+config/master.key
+config/credentials.yml.enc
+
+# Docker関連
+*.pid
+*.swp
+*.swo
+
+# OSごと
+.DS_Store
+Thumbs.db
+
+# その他
+coverage/
+*.log
+*.bak
+*.old
+
+# VSCodeなどエディタ設定
+.vscode/
+.idea/
