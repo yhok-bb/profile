@@ -1,24 +1,26 @@
-# README
+# Profile
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
 
-Things you may want to cover:
+- プロフィール情報をWeb上で公開するためのシンプルなアプリケーション
 
-* Ruby version
+## サイト
+https://tonebyte.net/
 
-* System dependencies
+## セットアップ手順（開発環境）
 
-* Configuration
+1. リポジトリをclone
+2. `docker compose build`
+3. `docker compose up -d`
+4. `docker compose exec web bin/rails db:setup`
 
-* Database creation
+## 本番環境
 
-* Database initialization
+1. `docker compose -f docker-compose.prod.yml build`
+2. `docker compose -f docker-compose.prod.yml up -d`
 
-* How to run the test suite
+## テスト
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker compose exec web bin/rails test
+```
